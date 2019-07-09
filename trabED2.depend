@@ -1,0 +1,110 @@
+# depslib dependency file v1.0
+1558046573 source:c:\users\bruno\documents\projetos codeblocks\trabed2\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"rating.h"
+	"ordenacoes.h"
+	"funcoesGerais.h"
+	<ctime>
+	<algorithm>
+
+1558042332 source:c:\users\bruno\documents\projetos codeblocks\trabed2\ordenacoes.cpp
+	"ordenacoes.h"
+
+1555010183 source:c:\users\bruno\documents\projetos codeblocks\trabed2\rating.cpp
+	"rating.h"
+
+1557617987 c:\users\bruno\documents\projetos codeblocks\trabed2\rating.h
+	<string>
+	<stdlib.h>
+	<iostream>
+
+1557800387 c:\users\bruno\documents\projetos codeblocks\trabed2\ordenacoes.h
+	"rating.h"
+	<iostream>
+	<ctime>
+
+1558043000 source:c:\users\bruno\documents\projetos codeblocks\trabed2\funcoesgerais.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"rating.h"
+	"ordenacoes.h"
+	"funcoesGerais.h"
+	<ctime>
+	<algorithm>
+
+1557530743 c:\users\bruno\documents\projetos codeblocks\trabed2\funcoesgerais.h
+	<iostream>
+	<fstream>
+	<string>
+	"rating.h"
+	"ordenacoes.h"
+	"funcoesGerais.h"
+	<ctime>
+
+1562710260 source:c:\users\tm\documents\code blocks\projetos\ed2final\funcoesgerais.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<sstream>
+	"rating.h"
+	"funcoesGerais.h"
+	"Huffman.h"
+	<ctime>
+	<algorithm>
+
+1562707394 c:\users\tm\documents\code blocks\projetos\ed2final\rating.h
+	<string>
+	<stdlib.h>
+	<iostream>
+
+1558032618 c:\users\tm\documents\code blocks\projetos\ed2final\ordenacoes.h
+	"rating.h"
+	<iostream>
+	<ctime>
+
+1562708724 c:\users\tm\documents\code blocks\projetos\ed2final\funcoesgerais.h
+	<iostream>
+	<fstream>
+	<ctime>
+	<string>
+	"rating.h"
+	"funcoesGerais.h"
+
+1562709313 source:c:\users\tm\documents\code blocks\projetos\ed2final\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<ctime>
+	<algorithm>
+	"rating.h"
+	"funcoesGerais.h"
+	"Huffman.h"
+
+1558032618 source:c:\users\tm\documents\code blocks\projetos\ed2final\ordenacoes.cpp
+	"ordenacoes.h"
+
+1562710288 source:c:\users\tm\documents\code blocks\projetos\ed2final\rating.cpp
+	"rating.h"
+
+1562710694 source:c:\users\tm\documents\code blocks\projetos\ed2final\huffman.cpp
+	"Huffman.h"
+
+1562703070 c:\users\tm\documents\code blocks\projetos\ed2final\huffman.h
+	"NoH.h"
+	<stdlib.h>
+	<iostream>
+	<string>
+	<ctime>
+	<fstream>
+	<bitset>
+
+1562710409 c:\users\tm\documents\code blocks\projetos\ed2final\noh.h
+	<stdlib.h>
+
