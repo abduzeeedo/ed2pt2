@@ -1,0 +1,151 @@
+
+================================================================================
+Metodo Huffman - Iteracao 1 de 3.
+Fazendo a compressao de 1000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 319442 bytes.
+Tamanho ocupado apos a compressao: 137073 bytes.
+Taxa de compressao: 0.429101, Ou seja, cerca de 42.910137%
+Tempo gasto pela compressao: 0.030000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 2 de 3.
+Fazendo a compressao de 5000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 1612876 bytes.
+Tamanho ocupado apos a compressao: 691847 bytes.
+Taxa de compressao: 0.428952, Ou seja, cerca de 42.895237%
+Tempo gasto pela compressao: 0.137000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 3 de 3.
+Fazendo a compressao de 10000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 3184842 bytes.
+Tamanho ocupado apos a compressao: 1367255 bytes.
+Taxa de compressao: 0.429301, Ou seja, cerca de 42.930073%
+Tempo gasto pela compressao: 0.248000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 1 de 3.
+Fazendo a compressao de 1000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 316302 bytes.
+Tamanho ocupado apos a compressao: 135556 bytes.
+Taxa de compressao: 0.428565, Ou seja, cerca de 42.856510%
+Tempo gasto pela compressao: 0.024000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 2 de 3.
+Fazendo a compressao de 5000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 1598395 bytes.
+Tamanho ocupado apos a compressao: 685984 bytes.
+Taxa de compressao: 0.429171, Ou seja, cerca de 42.917053%
+Tempo gasto pela compressao: 0.130000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 3 de 3.
+Fazendo a compressao de 10000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 3186356 bytes.
+Tamanho ocupado apos a compressao: 1366942 bytes.
+Taxa de compressao: 0.428999, Ou seja, cerca de 42.899853%
+Tempo gasto pela compressao: 0.249000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 1 de 3.
+Fazendo a compressao de 1000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 318334 bytes.
+Tamanho ocupado apos a compressao: 136360 bytes.
+Taxa de compressao: 0.428355, Ou seja, cerca de 42.835514%
+Tempo gasto pela compressao: 0.026000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 2 de 3.
+Fazendo a compressao de 5000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 1596331 bytes.
+Tamanho ocupado apos a compressao: 685169 bytes.
+Taxa de compressao: 0.429215, Ou seja, cerca de 42.921486%
+Tempo gasto pela compressao: 0.126000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 3 de 3.
+Fazendo a compressao de 10000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 3208502 bytes.
+Tamanho ocupado apos a compressao: 1377468 bytes.
+Taxa de compressao: 0.429318, Ou seja, cerca de 42.931808%
+Tempo gasto pela compressao: 0.329000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 1 de 3.
+Fazendo a compressao de 1000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 329494 bytes.
+Tamanho ocupado apos a compressao: 141438 bytes.
+Taxa de compressao: 0.429258, Ou seja, cerca de 42.925819%
+Tempo gasto pela compressao: 0.028000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 2 de 3.
+Fazendo a compressao de 5000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 1602438 bytes.
+Tamanho ocupado apos a compressao: 688124 bytes.
+Taxa de compressao: 0.429423, Ou seja, cerca de 42.942314%
+Tempo gasto pela compressao: 0.153000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 3 de 3.
+Fazendo a compressao de 10000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 3199955 bytes.
+Tamanho ocupado apos a compressao: 1373225 bytes.
+Taxa de compressao: 0.429139, Ou seja, cerca de 42.913883%
+Tempo gasto pela compressao: 0.260000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 1 de 3.
+Fazendo a compressao de 1000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 310675 bytes.
+Tamanho ocupado apos a compressao: 133433 bytes.
+Taxa de compressao: 0.429494, Ou seja, cerca de 42.949383%
+Tempo gasto pela compressao: 0.026000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 2 de 3.
+Fazendo a compressao de 5000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 1596659 bytes.
+Tamanho ocupado apos a compressao: 685710 bytes.
+Taxa de compressao: 0.429466, Ou seja, cerca de 42.946552%
+Tempo gasto pela compressao: 0.141000
+================================================================================
+
+================================================================================
+Metodo Huffman - Iteracao 3 de 3.
+Fazendo a compressao de 10000 sinopses.
+Compressao de sinopses usando metodo Huffman completa.
+Tamanho ocupado antes da compressao: 3158908 bytes.
+Tamanho ocupado apos a compressao: 1354560 bytes.
+Taxa de compressao: 0.428806, Ou seja, cerca de 42.880642%
+Tempo gasto pela compressao: 0.288000
+================================================================================
+
