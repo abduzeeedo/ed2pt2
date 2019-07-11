@@ -1,0 +1,61 @@
+
+================================================================================
+Metodo LZW - Iteracao 1 de 3.
+Fazendo a compressao de 1000 sinopses.
+Compressao de sinopses usando metodo LZW completa.
+Tamanho ocupado antes da compressao: 319442 bytes.
+Tamanho ocupado apos a compressao: 198622 bytes.
+Taxa de compressao: 0.621778, Ou seja, cerca de 62.177795%
+Tempo gasto pela compressao: 70.324997
+================================================================================
+
+================================================================================
+Metodo LZW - Iteracao 2 de 3.
+Fazendo a compressao de 5000 sinopses.
+Compressao de sinopses usando metodo LZW completa.
+Tamanho ocupado antes da compressao: 1612876 bytes.
+Tamanho ocupado apos a compressao: 895391 bytes.
+Taxa de compressao: 0.555152, Ou seja, cerca de 55.515182%
+Tempo gasto pela compressao: 1298.154053
+================================================================================
+
+================================================================================
+Metodo LZW - Iteracao 3 de 3.
+Fazendo a compressao de 10000 sinopses.
+Compressao de sinopses usando metodo LZW completa.
+Tamanho ocupado antes da compressao: 3184842 bytes.
+Tamanho ocupado apos a compressao: 1688001 bytes.
+Taxa de compressao: 0.530011, Ou seja, cerca de 53.001087%
+Tempo gasto pela compressao: 4691.003906
+================================================================================
+
+================================================================================
+Metodo LZW - Iteracao 1 de 3.
+Fazendo a compressao de 1000 sinopses.
+Compressao de sinopses usando metodo LZW completa.
+Tamanho ocupado antes da compressao: 316302 bytes.
+Tamanho ocupado apos a compressao: 197667 bytes.
+Taxa de compressao: 0.624931, Ou seja, cerca de 62.493122%
+Tempo gasto pela compressao: 69.489998
+================================================================================
+
+================================================================================
+Metodo LZW - Iteracao 2 de 3.
+Fazendo a compressao de 5000 sinopses.
+Compressao de sinopses usando metodo LZW completa.
+Tamanho ocupado antes da compressao: 1598395 bytes.
+Tamanho ocupado apos a compressao: 886692 bytes.
+Taxa de compressao: 0.554739, Ou seja, cerca de 55.473900%
+Tempo gasto pela compressao: 1287.370972
+================================================================================
+
+================================================================================
+Metodo LZW - Iteracao 3 de 3.
+Fazendo a compressao de 10000 sinopses.
+Compressao de sinopses usando metodo LZW completa.
+Tamanho ocupado antes da compressao: 3186356 bytes.
+Tamanho ocupado apos a compressao: 1688882 bytes.
+Taxa de compressao: 0.530036, Ou seja, cerca de 53.003555%
+Tempo gasto pela compressao: 4690.206055
+================================================================================
+
