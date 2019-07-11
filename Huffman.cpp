@@ -144,7 +144,7 @@ void Huffman::criaArvore()
 	/*	Cria Nos de Huffman de acordo com a seguintes caracteristicas:
 	Filho a esquerda eh o No com menor frequencia
 	Filho a direita eh o No com a segunda menor frequencia
-	A frequencia do No pai eh a frequencia de seus dois filhos*/
+	A frequencia do No pai eh a frequencia de seus dois filhos somados*/
 	while (priLista != NULL)
 	{
 		aux = new NoH();

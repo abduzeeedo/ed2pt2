@@ -7,22 +7,13 @@
 #include "rating.h"
 #include "funcoesGerais.h"
 
-void imprimeMenu();
-void salvarTxt(string salvar, string file);
-void randomiza(Rating** vetor, int tam, int seed);
-void randomizaInt(int vetor [], int tam, int seed);
-void imprimeVetor(int* userId);
-void imprimeObjetos (Rating** vetor, int tam);
-void leituraArq(int* userId, int* movieId, float* rating, string* timestamp, int NUM_ELEMENTOS);
-void instanciaObjArq (Rating** vetor, int tam);
-void loteQuickSort (Rating** vetor, int tam);
-void loteQuickSortInt (int vetor[], int tam, char tipo);
-void loteInsertionSort (int vetor[], int tam);
-void loteHeapSort (int vetor[], int tam);
-void loteMergeSort (int vetor[], int tam);
-void loteShellSort (int vetor[], int tam);
-void randomiza();
-void codigoFuncao(Rating* vet[], int tam);
+void imprimeMenu(); //funcao que imprime o menu em tela
+void salvarTxt(string salvar, string file); //salva os dados de uma string num arquivo txt, usado para exportar os resultados de execucao
+void randomiza(Rating** vetor, int tam); //funcao que randomiza um vetor de objetos do tipo rating
+void imprimeVetor(int* userId); //imprime um vetor de userID
+void imprimeObjetos (Rating** vetor, int tam);//imprime os dados de um vetor de objetos do tipo Rating
+void instanciaObjArq (Rating** vetor, int tam); //funcao que carrega um vetor de objetos do tipo Rating com informacoes do arquivo overview.csv
+void codigoFuncao(Rating* vet[], int tam); //funcoes do menu principal, que executa os algoritmos de compressao
 
 
 #endif // FUNCOESGERAIS_H_INCLUDED

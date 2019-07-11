@@ -23,7 +23,7 @@ int main()
 {
     //**************INSTANCIANDO VETOR DE OBJETOS, INSERINDO INFOS DO ARQUIVO CSV ****************************
     int tam = 40000; // TAMANHO DO VETOR DE OBJETOS A SER INSTANCIADO E IMPRESSO EM TELA
-    Rating** objetos = new Rating*[tam]; //exemplo de como instanciar um vetor da classe Ratings com tam ratings
+    Rating** objetos = new Rating*[tam]; // instanciando um vetor da classe Ratings com tam ratings
     instanciaObjArq(objetos, tam); //Atribui valores no vetor exemplo com tam valores do arquivo Overview.csv
 
     // IMPRESSAO DO MENU E CRIAÇÃO DE MENU DE USUARIO
