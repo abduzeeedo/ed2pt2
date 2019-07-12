@@ -1,3 +1,10 @@
+/*
+    Trabalho 2 de Estrutura de Dados 2
+    Bruno Carvalho
+    Diogo Destefano
+    Fernanda Silva
+    Thiago Guimarães
+*/
 #ifndef RATING_H_INCLUDED
 #define RATING_H_INCLUDED
 
@@ -13,7 +20,7 @@ private:
 	int userID;//ID do usuario
 	int movieID;//ID do filme
 	float rating; //valor do rating dado ao filme
-	string overview; //data e hora da pergunta
+	string overview; //sinopse
 public:
 	Rating();//Construtor Sobrecarregado
 	Rating(int uid, int mid, float ra, string ts);//Construtor Padrao, com todas as variaveis

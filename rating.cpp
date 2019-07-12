@@ -1,11 +1,10 @@
-/*---------------------------------------
-TRABALHO DE ESTRUTURA DE DADOS 2
-GRUPO:
-Bruno
-Diogo
-Fernanda
-Thiago
---------------------------------------*/
+/*
+    Trabalho 2 de Estrutura de Dados 2
+    Bruno Carvalho
+    Diogo Destefano
+    Fernanda Silva
+    Thiago Guimarães
+*/
 #include "rating.h"
 
 

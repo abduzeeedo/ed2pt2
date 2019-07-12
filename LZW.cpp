@@ -1,93 +1,133 @@
+/*
+    Trabalho 2 de Estrutura de Dados 2
+    Bruno Carvalho
+    Diogo Destefano
+    Fernanda Silva
+    Thiago Guimarães
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <sstream>
 #include "LZW.h"
 
-struct Node{
-	int index;
-	string data;
-	Node *next;
+//Estrutura de um nó do encadeamento
+struct No{
+	int id;
+	string val;
+	No *prox;
 };
 
-void st_Node(Node *head, int index, string data){
-	head->index = index;
-	head->data = data;
-	head->next = NULL;
+/*
+FUNCAO DE  A LISTA DE NOS
+Entrada: Ponteiro para o primeiro nó do encadeamento, id e valor de tal nó
+Saida: Lista instanciada
+*/
+void st_No(No *pri, int id, string val){
+	pri->id = id;
+	pri->val = val;
+	pri->prox = NULL;
 }
 
-void insert_Node(Node *head, int index, string data){
-	Node *new_Node = new Node;
-	new_Node->index = index;
-	new_Node->data = data;
-	new_Node->next = NULL;
+/*
+FUNCAO DE INSERIR UM NO NA LISTA
+Entrada: Ponteiro para o primeiro nó do encadeamento, id e valor do nó a ser inserido
+Saida: No adicionado na lista
+*/
+void insere_No(No *pri, int id, string val){
+	No *new_No = new No;
+	new_No->id = id;
+	new_No->val = val;
+	new_No->prox = NULL;
 
-	Node *curr = head;
+	No *curr = pri;
 	while (curr != NULL)
 	{
-		if (curr->next == NULL)
+		if (curr->prox == NULL)
 		{
-			curr->next = new_Node;
+			curr->prox = new_No;
 			return;
 		}
-		curr = curr->next;
+		curr = curr->prox;
 	}
 }
 
-Node *search_Node(Node *head, string data)
+/*
+FUNCAO DE BUSCAR UM NO PELO SEU VALOR
+Entrada: Ponteiro para o primeiro nó da lista, valor de tal nó
+Saida: Retorna o ponteiro pro nó se for encontrado, e NULL caso a lista não possua o nó com o valor passado
+*/
+No *procura_No(No *pri, string val)
 {
-	Node *curr = head;
+	No *curr = pri;
 	while (curr != NULL)
 	{
-		if (data.compare(curr->data) == 0)
+		if (val.compare(curr->val) == 0)
 			return curr;
 		else
-			curr = curr->next;
+			curr = curr->prox;
 	}
 	return NULL;
 }
 
-Node *search_Node(Node *head, int index)
+
+/*
+FUNCAO DE BUSCAR UM NO PELO SEU ID
+Entrada: Ponteiro para o primeiro nó da lista, id de tal nó
+Saida: Retorna o ponteiro pro nó se for encontrado, e NULL caso a lista não possua o nó com o id passado
+*/
+No *procura_No(No *pri, int id)
 {
-	Node *curr = head;
+	No *curr = pri;
 	while (curr != NULL)
 	{
-		if (index == curr->index)
+		if (id == curr->id)
 			return curr;
 		else
-			curr = curr->next;
+			curr = curr->prox;
 	}
 	return NULL;
 }
 
-bool delete_Node(Node *head, Node *to_delete){
+/*
+FUNCAO DE REMOVER NO DA LISTA
+Entrada: Ponteiro para o primeiro nó do encadeamento, e ponteiro pro nó a ser removido
+Saida: Caso exista na lista, remove
+*/
+bool deleta_No(No *pri, No *to_delete){
 	if (to_delete == NULL)
 		return false;
-	else if (to_delete == head)
+	else if (to_delete == pri)
 	{
-		head = to_delete->next;
+		pri = to_delete->prox;
 		delete to_delete;
 		return true;
 	}
 	else{
-		Node *curr = head;
+		No *curr = pri;
 		while (curr)
 		{
-			if (curr->next == to_delete)
+			if (curr->prox == to_delete)
 			{
-				curr->next = to_delete->next;
+				curr->prox = to_delete->prox;
 				delete to_delete;
 				return true;
 			}
-			curr = curr->next;
+			curr = curr->prox;
 		}
 		return false;
 	}
 }
 
+/*
+FUNCAO DE REALIZAR UM SPLIT NA STRING
+Entrada: String a ser dividida e um char que delimita onde ela será dividida
+Saida: um vetor com a divisao realizada
+*/
 vector <string> split(string str, char delimiter) {
 	vector<string> internal;
-	stringstream ss(str); // Turn the string into a stream.
+	stringstream ss(str); // Transforma uma string numa stream
 	string tok;
 
 	while (getline(ss, tok, delimiter)) {
@@ -97,111 +137,54 @@ vector <string> split(string str, char delimiter) {
 	return internal;
 }
 
-string LZW(string input, int option)
+/*
+FUNCAO DE REALIZAR A COMPACTACAO DA STRING VIA LZW
+Entrada: String a ser comprimida
+Saida: os codigos da compressao LZW em uma string
+*/
+string LZW(string input)
 {
-	if (option == 1)
-	{
-		Node *dictionary = new Node;
-		string result;
-		int length, last_seen, index = 128;
 
-		st_Node(dictionary, 32, " ");
-		for (int i = 33; i < 128; i++)
-		{
-			string data;
-			data = i;
-			insert_Node(dictionary, i, data);
-		}
+    No *dicionario = new No;
+    string result;
+    int length, last_seen, id = 128;
 
-		length = (int)input.length();
+    st_No(dicionario, 32, " ");
+    for (int i = 33; i < 128; i++)
+    {
+        string val;
+        val = i;
+        insere_No(dicionario, i, val);
+    }
 
-		for (int i = 0; i < length; i++)
-		{
-			Node *searched;
-			string search;
-			search = input[i];
+    length = (int)input.length();
 
-		re_search:
-			searched = search_Node(dictionary, search);
-			if (searched)
-			{
-				i++;
-				search += input[i];
-				last_seen = searched->index;
-				if (i != length)
-					goto re_search;
-				else
-					goto print;
-			}
-			else
-			{
-				insert_Node(dictionary, index, search);
-				index++;
+    for (int i = 0; i < length; i++)
+    {
+        No *searched;
+        string search;
+        search = input[i];
+
+        re_search:
+        searched = procura_No(dicionario, search);
+        if (searched)
+        {
+            i++;
+            search += input[i];
+            last_seen = searched->id;
+            if (i != length)
+                goto re_search;
+            else
+                goto print;
+        }
+        else
+        {
+            insere_No(dicionario, id, search);
+            id++;
 			print:
-				result += to_string(last_seen) + " ";
-				i--;
-			}
-		}
-
+            result += to_string(last_seen) + " ";
+            i--;
+        }
+    }
 		return result;
-	}
-	if (option == 2)
-	{
-		Node *dictionary = new Node;
-		string result;
-		int index = 128;
-
-		st_Node(dictionary, 32, " ");
-		for (int i = 33; i < 128; i++)
-		{
-			string data;
-			data = i;
-			insert_Node(dictionary, i, data);
-		}
-
-		vector <string> s_input = split(input, ' ');
-		for (int i = 0; i < s_input.size(); i++)
-		{
-			Node *searched;
-			int search;
-			search = stoi(s_input[i]);
-
-			searched = search_Node(dictionary, search);
-
-			string cur, prev, data;
-			if (searched)
-				cur = search_Node(dictionary, stoi(s_input[i]))->data;
-			if (i != 0)
-				prev = search_Node(dictionary, stoi(s_input[i - 1]))->data;
-			else
-				prev = cur;
-
-			int show = 0;
-			if (searched)
-			{
-				result += searched->data;
-
-				if (i != 0)
-				{
-					data = prev + cur[0];
-					if (show != 1)
-					{
-						insert_Node(dictionary, index, data);
-						index++;
-					}
-				}
-				show = 0;
-			}
-			else
-			{
-				data = prev + prev[0];
-				insert_Node(dictionary, index, data);
-				index++;
-				show = 1;
-				result += data;
-			}
-		}
-
-		return result;
-	}
 }

@@ -1,3 +1,11 @@
+/*
+    Trabalho 2 de Estrutura de Dados 2
+    Bruno Carvalho
+    Diogo Destefano
+    Fernanda Silva
+    Thiago Guimarães
+*/
+
 #ifndef FUNCOESGERAIS_H_INCLUDED
 #define FUNCOESGERAIS_H_INCLUDED
 #include <iostream>

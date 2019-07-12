@@ -32,11 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Huffman.cpp" />
+		<Unit filename="Huffman.h" />
+		<Unit filename="LZW.cpp" />
+		<Unit filename="LZW.h" />
+		<Unit filename="NoH.h" />
 		<Unit filename="funcoesGerais.cpp" />
 		<Unit filename="funcoesGerais.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="ordenacoes.cpp" />
-		<Unit filename="ordenacoes.h" />
 		<Unit filename="rating.cpp" />
 		<Unit filename="rating.h" />
 		<Extensions>

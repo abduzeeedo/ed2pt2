@@ -1,3 +1,11 @@
+/*
+    Trabalho 2 de Estrutura de Dados 2
+    Bruno Carvalho
+    Diogo Destefano
+    Fernanda Silva
+    Thiago Guimarães
+*/
+
 #ifndef FUNCOESGERAIS_CPP_INCLUDED
 #define FUNCOESGERAIS_CPP_INCLUDED
 #include <iostream>
@@ -6,7 +14,6 @@
 #include <vector>
 #include <sstream>
 #include "rating.h"
-#define TAM 100
 #include "funcoesGerais.h"
 #include "Huffman.h"
 #include "LZW.h"
@@ -53,7 +60,7 @@ void salvarTxt(string salvar, string file) {
 void randomiza(Rating** vetor, int tam) {
 	for (int i = 0; i < tam; i++)
 	{
-		srand(2 * i + tam); //Troca a seed do rand a cada iteraçao
+		srand(2 * i + tam); //Troca a seed do rand a cada iteraçao, considerando o tamanho do vetor
 		swap(vetor[rand() % tam], vetor[rand() % tam]);
 	}
 }
@@ -91,7 +98,7 @@ void instanciaObjArq (Rating** vetor, int tam){
         ///Pega linhas e vai adicionando em posicoes do vetor de objetos
         while(pos < tam){
 
-                getline(arquivo, buffer, ';');
+                getline(arquivo, buffer, ';'); //novo arquivo csv utiliza ; como separador de células
                 userID = stoi(buffer);
 
                 getline(arquivo, buffer, ';');
@@ -103,15 +110,12 @@ void instanciaObjArq (Rating** vetor, int tam){
                 getline(arquivo, buffer, '\n');
                 overview = buffer;
 
-                //vetor[pos]->addRating(userID, movieID, rating, overview);
-
                 Rating* aux = new Rating(userID, movieID, rating, overview); //cria um objeto auxiliar, colocando os valores lidos do arquivo
                 vetor[pos] = aux; //atribui tais valores pra uma posicao do vetor de objetos
                 pos++;
         }
         arquivo.close();
         randomiza(vetor, tam); //Chama funcao que randomiza a posicao dos objetos do vetor
-
     }
     else
         cout << "Erro ao abrir o arquivo !" << endl;
@@ -152,7 +156,7 @@ void removeEspaco(string &str)
 			}
 		}
 	}
-	//Remove todos os epacos no final do texto, se houver algum
+	//Remove todos os espacos no final do texto, se houver algum
 	if (i <= 1)
 		str.erase(str.begin() + i, str.end());
 	else
@@ -208,10 +212,7 @@ vector<int> importaEntrada(const char* nomeArquivo)
 string limpaString(string original)
 {
 	string s = original;
-	/*Nao usamos o erase/remove porque em sinopses que nao existe espacos entre a pontuacao, as palavras ficariam todas juntas dificultando dividir o sinopse em varias palavras
-	Exemplo: usando erase/remove no sinopse Exemplo.de.sinopse, iria ficar Exemplodesinopse e isso ia contar como uma palavra so
-	Usando o replace_if com espacos, ficaria Exemplo de sinopse, o que eh o certo*/
-	transform(s.begin(), s.end(), s.begin(), ::tolower);//Coloca as letras em minusculo
+	//transform(s.begin(), s.end(), s.begin(), ::tolower);//Coloca as letras em minusculo
 	replace_if(s.begin(), s.end(), charInvalido, ' ');//Troca todos os sinais de pontuacao e caracteres especiais por espacos
 	removeEspaco(s);//Remove os espacos desneessarios
 	return s;
@@ -242,10 +243,12 @@ void codigoFuncao(Rating* vet[], int tam) {
 			cout << "Fazendo a compressao de sinopses usando metodo Huffman..." << endl;
 			string comprime;
 			string saida_Huf = "";
+			string comprimeLimpo = "";
 
+            //fazendo a testes para 5 seeds diferentes
 			for (int i =0; i < 5; i++){
                 string nomeArq = "";
-                saidaHuff.clear();
+                saidaHuff.clear(); //limpa a string de saida a cada iteracao
                 for (int v = 0; v < vEntrada.size(); v++){
                     Huffman* huf = new Huffman();
 
@@ -265,12 +268,16 @@ void codigoFuncao(Rating* vet[], int tam) {
                     /*Cria uma string com todos os sinopses que foram passados*/
                     for (int h = 0; h < vEntrada[v]; h++)
                     {
+                        /* OPCIONAL, PARA FIM DE TESTES - APLICA A "LIMPEZA" DA STRING, MAS HÁ PERDAS DE INFORMAÇÕES!! REMOVER COMENTARIOS AQUI E COMENTAR A PROXIMA LINHA APENAS!
+                            comprimeLimpo = limpaString(vet[h]->getOverview());
+                            comprime += comprimeLimpo;
+                        */
                         comprime += vet[h]->getOverview();
                         comprime += "\n"; //Pula uma linha a cada sinopse
                     }
 
                     cout << "[3] Salvando string em arquivo de texto." << endl;
-                    /*Salva a string sem estar comprimida num TXT para comprar os tamanhos depois*/
+                    /*Salva a string sem estar comprimida num TXT para comparar os tamanhos depois*/
                     string arquivoSemCompressao = "Huffman_SemCompressao_Iteracao_" + to_string(v+1) + " Seed=" + to_string(i) + ".txt";
                     salvarTxt(comprime, arquivoSemCompressao);
 
@@ -319,11 +326,12 @@ void codigoFuncao(Rating* vet[], int tam) {
 			cout << "Fazendo a compressao de sinopses usando metodo LZW..." << endl;
 			string comprime;
 			string saida_lzw = "";
+            string comprimeLimpo = "";
 
 			for (int i =0; i < 5; i++){
                 string nomeArq = "";
                 saidaLZWW.clear();
-                for (int v = 0; v < vEntrada.size(); v++){
+                for (int v = 0; v < vEntrada.size()-2; v++){
                     /*Exibindo e salvando dados de entrada*/
                     cout << endl;
                     saidaLZWW += "\n================================================================================\n";
@@ -340,6 +348,11 @@ void codigoFuncao(Rating* vet[], int tam) {
                     /*Cria uma string com todos os sinopses que foram passados*/
                     for (int h = 0; h < vEntrada[v]; h++)
                     {
+
+                        /* OPCIONAL, PARA FIM DE TESTES - APLICA A "LIMPEZA" DA STRING, MAS HÁ PERDAS DE INFORMAÇÕES!! REMOVER COMENTARIOS E COMENTAR AS PROXIMA LINHA APENAS!
+                            comprimeLimpo = limpaString(vet[h]->getOverview());
+                            comprime += comprimeLimpo;
+                        */
                         comprime += vet[h]->getOverview();
                         comprime += "\n"; //Pula uma linha a cada sinopse
                     }
@@ -356,7 +369,7 @@ void codigoFuncao(Rating* vet[], int tam) {
                     clock_t fimClock;
                     inicioClock = clock();
 
-                    saida_lzw = LZW(comprime, 1);
+                    saida_lzw = LZW(comprime);
 
                     fimClock = clock();
                     float tempoTotal = fimClock-inicioClock;

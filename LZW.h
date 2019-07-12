@@ -1,3 +1,11 @@
+/*
+    Trabalho 2 de Estrutura de Dados 2
+    Bruno Carvalho
+    Diogo Destefano
+    Fernanda Silva
+    Thiago Guimarães
+*/
+
 #ifndef LZW_H_INCLUDED
 #define LZW_H_INCLUDED
 #include <iostream>
@@ -9,13 +17,13 @@
 #include "rating.h"
 #include "funcoesGerais.h"
 
-struct Node;
-void st_Node(Node *head, int index, string data);
-void insert_Node(Node *head, int index, string data);
-Node *search_Node(Node *head, string data);
-Node *search_Node(Node *head, int index);
-bool delete_Node(Node *head, Node *to_delete);
-vector <string> split(string str, char delimiter);
-string LZW(string input, int option);
+struct No; //estrutura de um no
+void st_No(No *pri, int id, string val); //instancia a lista
+void insere_No(No *pri, int id, string val); //insere um No no encadeamento
+No *procura_No(No *pri, string val); //procura um no por uma string
+No *procura_No(No *pri, int id); // procura no por user ID
+bool deleta_No(No *pri, No *to_delete); //deleta no do encadeamento
+vector <string> split(string str, char delimiter); //divide uma string
+string LZW(string input); //algoritmo LZW de compressao
 
 #endif // LZW_H_INCLUDED
